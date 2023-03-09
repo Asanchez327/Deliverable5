@@ -1,0 +1,104 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOc3dKMMUxncYaazqzP8Uie",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Asanchez327/Deliverable5/blob/master/deliverable%207\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd"
+      ],
+      "metadata": {
+        "id": "8S9p4l9vNxDV"
+      },
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 30,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F260PDoRLJBN",
+        "outputId": "0d40a849-52cb-4573-fc55-cd9881735c8d"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter an interger value greater than 0: 4\n"
+          ]
+        }
+      ],
+      "source": [
+        "n = int(input(\"Enter an interger value greater than 0: \"))\n",
+        "even_numbers = []\n",
+        "odd_numbers = []\n",
+        "fibonacci_numbers = [0,1]\n",
+        "if n <= 0:\n",
+        "  print(\"invalid input\")\n",
+        "fibonacci_list = [0,1]\n",
+        "even_list = [i*2 for i in range(n)]\n",
+        "odd_list = [i*2+1 for i in range(n)]\n",
+        "if n > 2:\n",
+        "  for i in range(2,n):\n",
+        "    fibonacci_list.append(fibonacci_list[i -1]+fibonacci_list[i -2])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "format\n",
+        "df = pd.DataFrame({'Even' : even_list,'Odd': odd_list, 'Fibonacci' : fibonacci_list})\n",
+        "print (df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dN-HvtF0QpDw",
+        "outputId": "99876049-f688-48d8-c7ea-94f51674dc37"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   Even  Odd  Fibonacci\n",
+            "0     0    1          0\n",
+            "1     2    3          1\n",
+            "2     4    5          1\n",
+            "3     6    7          2\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
